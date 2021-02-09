@@ -68,20 +68,20 @@ const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRando
 
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Farhan\n'
-            + 'ORG:Owner FXC7;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=628311800241:+62 831-1800-241\n'
+            + 'FN:Amrul Hadi\n'
+            + 'ORG:OwnerScript Farhan;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=62895622002734:+62895622002734\n'
             + 'END:VCARD'
 
 prefix = "!"
-name = "~ IRIENE BOT"
-rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN IRIENEBOT😁"
-rmenu = "HAI TEMEN IRIENEBOT👋 JANGAN LUPA DONASI YAA:)"
+name = "~ AMRUL BOT"
+rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN AMRULBOT😁"
+rmenu = "HAI TEMEN AMRULBOT👋 JANGAN LUPA DONASI YAA:)"
 botinfo = "UNTUK INVITE BOT SILAHKAN DONASI DULU YAA:)"
 limitt = 10
 memberLimit = 2
 ban = []
-premium = ["628311800241@s.whatsapp.net"]
+premium = ["62895622002734@s.whatsapp.net"]
 
 function kyun(seconds){
   function pad(s){
@@ -205,7 +205,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["628311800241@s.whatsapp.net"] // owner number ubah aja
+			const ownerNumber = ["62895622002734@s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -332,9 +332,9 @@ async function starts() {
                     })
                 await limitAdd(sender)
 				break 
-		case 'daftar':
+		                case 'daftar':
 					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('kamu sudah Menjadi Temen IRIENEBOT:D')
+					if (isUser) return reply('kamu sudah Menjadi Temen AMRULBOT:D')
 					if (isBanned) return reply(mess.only.benned)
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
